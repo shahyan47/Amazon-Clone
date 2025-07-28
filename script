@@ -1,0 +1,27 @@
+// Search bar (basic simulation)
+document.querySelector(".search-icon").addEventListener("click", () => {
+  const searchTerm = document.querySelector(".search-input").value.trim();
+  if (searchTerm) {
+    alert("You searched for: " + searchTerm);
+  } else {
+    alert("Please enter a product name.");
+  }
+});
+
+// Back to Top button behavior
+document.querySelector(".foot-panel1").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+// Optional: Dark mode toggle
+// You can add a button in your navbar: <button id="themeToggle">🌙</button>
+const toggle = document.getElementById("themeToggle");
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+  });
+}
